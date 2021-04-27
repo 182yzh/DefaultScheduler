@@ -19,5 +19,5 @@ func main(){
 	glog.Infof("test")
 	controller.Test1()
 	simulator.SimInit()
-	time.Sleep(100*time.Second)
+	//time.Sleep(100*time.Second)
 }

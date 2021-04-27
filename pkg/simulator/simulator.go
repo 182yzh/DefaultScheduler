@@ -165,7 +165,7 @@ func (m *Monitor)BeginGpuMonitor(){
 				panic(err)
 			}
 			go  cmd.Wait()
-			cmd = exec.Command("kubectl","create","-f",fmt.Sprintf("../yaml/"+name+".yaml"),"--kubeconfig="+config.Kubeconfig)
+			cmd = exec.Command("kubectl","create","-f",fmt.Sprintf("yaml/"+name+".yaml"),"--kubeconfig="+config.Kubeconfig)
 			var stdout bytes.Buffer
 			var stderr bytes.Buffer
 			cmd.Stdout = &stdout

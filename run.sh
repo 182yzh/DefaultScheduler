@@ -18,7 +18,7 @@ main() {
 
     ### run the program
     cd -
-    $HOME/DefaultScheduler/defaultscheduler -v=$v -log_dir=$HOME/log/dslog  -kubeconfig="/home/yzh/.kube/config" -totalgpu=1280 -gpulimit=64
+    $HOME/DefaultScheduler/defaultscheduler -v=$v -log_dir=$HOME/log/dslog  -kubeconfig="/home/yzh/.kube/config" -totalgpu=640 -gpulimit=64
     #./SchedulerFrame -v=$v -log_dir=$HOME/log  -kubeconfig="/home/yzh/.kube/config"   #-namespace="yzh" -alsologtostderr -gpulimit=1-go
 }
 

@@ -144,14 +144,14 @@ func SimInit()*SimInformer{
 	si.mutex = new(sync.Mutex)
 	si.jobs = make(map[string]int)
 	m := new(Monitor)
-	m.Init("/home/yzh/SchedulerFrame/SimulatorData/cluster_job_log")
+	m.Init("Test/cluster_job_log")
 	si.m = m
 	glog.Infof("start init")
 	controller.PodWatcherRegister("simpodwatcher",si)
 	if config.GetSimulateMode() == "gpunumber"{
-		go si.m.BeginGpuMonitor()
+		si.m.BeginGpuMonitor()
 	} else if config.GetSimulateMode() == "timestep" {
-		go si.m.BeginTimeMonitor()
+		si.m.BeginTimeMonitor()
 	} else {
 		glog.Fatal("Error cannot see this simulator mod")
 	}
